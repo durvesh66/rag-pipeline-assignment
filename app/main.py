@@ -18,6 +18,12 @@ app = FastAPI(
     description="Document upload and query system using RAG",
     version="1.0.0"
 )
+from fastapi.responses import RedirectResponse
+
+@app.get("/")
+async def read_root():
+    """Redirect root to API documentation"""
+    return RedirectResponse(url='/docs')
 
 app.add_middleware(
     CORSMiddleware,
