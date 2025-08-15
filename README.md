@@ -5,6 +5,65 @@ Built with **FastAPI**, **Sentence-Transformers**, **FAISS**, and **Docker**.
 
 ---
 
+## 🚀 How to Use Your Live RAG Pipeline Demo (Complete Guide)
+
+Your RAG Pipeline is now live and ready for testing! Here's a comprehensive guide to explore all its features:
+
+### 🌐 Access Your Live Demo
+Visit your deployed application at:  
+[**https://rag-pipeline-yoj9.onrender.com/docs**](https://rag-pipeline-yoj9.onrender.com/docs)  
+
+This opens the interactive **FastAPI documentation (Swagger UI)** where you can test all endpoints directly from your browser.
+
+---
+
+### 📋 Step-by-Step Usage Guide
+
+#### **Step 1: ✅ Verify Service Health**
+1. Click on **GET /health**
+2. Click **Try it out**
+3. Click **Execute**
+4. **Expected Response**:
+```json
+{"status": "healthy", "service": "RAG Pipeline"}
+```
+
+---
+
+#### **Step 2: 📤 Upload Your Documents**
+1. Click on **POST /upload**
+2. Click **Try it out**
+3. Click **Choose Files** and select up to **20 documents**
+4. **Supported formats**: PDF, DOCX, TXT (≤ 10MB each)
+5. Click **Execute**
+6. **Expected Response**: Success message with processed document details
+
+---
+
+#### **Step 3: ❓ Query Your Documents**
+1. Click on **POST /query**
+2. Click **Try it out**
+3. Enter your query in JSON format:
+```json
+{
+  "query": "What is the main topic of the uploaded documents?",
+  "top_k": 3
+}
+```
+4. Click **Execute**
+5. **Expected Response**: Intelligent answer with source citations
+
+---
+
+#### **Step 4: 📊 Check System Metadata (Optional)**
+1. Click on **GET /metadata**
+2. Click **Try it out**
+3. Click **Execute**
+4. **View**: Stored documents count, total chunks, and system information
+
+
+
+
 ## 1 🚀 Setup & Installation
 
 ### 1.1 Prerequisites
@@ -170,58 +229,3 @@ Open issues or PRs on [GitHub](https://github.com/<YOUR_USERNAME>/rag-pipeline-a
 © 2025 **RAG Pipeline Project**
 
 
-## 🚀 How to Use Your Live RAG Pipeline Demo (Complete Guide)
-
-Your RAG Pipeline is now live and ready for testing! Here's a comprehensive guide to explore all its features:
-
-### 🌐 Access Your Live Demo
-Visit your deployed application at:  
-[**https://rag-pipeline-yoj9.onrender.com/docs**](https://rag-pipeline-yoj9.onrender.com/docs)  
-
-This opens the interactive **FastAPI documentation (Swagger UI)** where you can test all endpoints directly from your browser.
-
----
-
-### 📋 Step-by-Step Usage Guide
-
-#### **Step 1: ✅ Verify Service Health**
-1. Click on **GET /health**
-2. Click **Try it out**
-3. Click **Execute**
-4. **Expected Response**:
-```json
-{"status": "healthy", "service": "RAG Pipeline"}
-```
-
----
-
-#### **Step 2: 📤 Upload Your Documents**
-1. Click on **POST /upload**
-2. Click **Try it out**
-3. Click **Choose Files** and select up to **20 documents**
-4. **Supported formats**: PDF, DOCX, TXT (≤ 10MB each)
-5. Click **Execute**
-6. **Expected Response**: Success message with processed document details
-
----
-
-#### **Step 3: ❓ Query Your Documents**
-1. Click on **POST /query**
-2. Click **Try it out**
-3. Enter your query in JSON format:
-```json
-{
-  "query": "What is the main topic of the uploaded documents?",
-  "top_k": 3
-}
-```
-4. Click **Execute**
-5. **Expected Response**: Intelligent answer with source citations
-
----
-
-#### **Step 4: 📊 Check System Metadata (Optional)**
-1. Click on **GET /metadata**
-2. Click **Try it out**
-3. Click **Execute**
-4. **View**: Stored documents count, total chunks, and system information
